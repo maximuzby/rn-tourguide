@@ -40,7 +40,7 @@ interface State {
 const FIRST_PATH = `M0,0H${screenDimensions.width}V${
   screenDimensions.height
 }H0V0ZM${screenDimensions.width / 2},${
-  screenDimensions.height / 2
+  screenDimensions.height / 2 + 100
 } h 1 v 1 h -1 Z`
 
 const IS_WEB = Platform.OS !== 'web'
@@ -184,7 +184,7 @@ export class SvgMask extends Component<Props, State> {
         <Svg
           pointerEvents='none'
           width={this.state.canvasSize.x}
-          height={this.state.canvasSize.y}
+          height={this.state.canvasSize.y + 100}
         >
           <AnimatedSvgPath
             ref={this.mask}
